@@ -4,7 +4,6 @@ import os
 from src.products import Category, Product
 
 
-
 def read_from_json(path: str) -> list[dict]:
     """Функция принимает на вход путь до JSON-файла, а возвращает список словарей с данными о продуктах"""
     full_path = os.path.abspath(path)
