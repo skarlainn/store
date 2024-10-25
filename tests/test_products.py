@@ -9,11 +9,13 @@ def test_count_products_and_category(category, product) -> None:
     category.add_product(product)
     assert category.product_count == 5
 
+
 def test_products(product) -> None:
     assert product.description == 'Я сама "вечность"'
     assert product.name == "Nokia 3310"
     assert product.price == 9.99
     assert product.quantity == 1
+
 
 def test_category_property(category_test):
     assert category_test.products == (

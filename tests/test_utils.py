@@ -3,6 +3,7 @@ from unittest.mock import MagicMock, mock_open, patch
 
 from src.utils import create_objects_from_json, read_from_json
 
+
 @patch(
     "builtins.open",
     new_callable=mock_open,
@@ -12,7 +13,7 @@ from src.utils import create_objects_from_json, read_from_json
     '"quantity": 5}, {"name": "Iphone 15", "description": "512GB, Gray space", '
     '"price": 210000.0, "quantity": 8}]}]',
 )
-def test_read_json(mock_file, products_test) -> None:
+def test_read_from_json(mock_file, products_test) -> None:
     assert read_from_json(products_test) == [
         {
             "description": "Смартфоны, как средство не только коммуникации",

@@ -1,4 +1,3 @@
-
 class Category:
     """Класс со свойствами: имя, описание, список товаров категории"""
 
@@ -16,12 +15,10 @@ class Category:
         Category.product_count += len(products)
         Category.category_count += 1
 
-
     def add_product(self, product):
         """Метод добавляет продукт к списку продуктов в категории"""
         self.__products.append(product)
         Category.product_count += 1
-
 
     @property
     def products(self):
@@ -47,12 +44,10 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
-
     @classmethod
     def new_product(cls, product: dict):
         """Метод добавляет новый продукт"""
         return cls(**product)
-
 
     @property
     def price(self):
@@ -70,4 +65,3 @@ class Product:
                 self.__price = new_price
         else:
             self.__price = new_price
-
