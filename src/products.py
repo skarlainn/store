@@ -21,7 +21,7 @@ class Category:
         count_products = 0
         for product in self.__products:
             count_products += product.quantity
-        return f"{self.name},количество продуктов {count_products} шт."
+        return f"{self.name}, количество продуктов: {count_products} шт."
 
     def __iter__(self):
         self.products_index = 0
