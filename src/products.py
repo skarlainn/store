@@ -31,10 +31,9 @@ class Category:
         if self.products_index < len(self.__products):
             result = self.__products[self.products_index]
             self.products_index += 1
-            return  str(result)
+            return str(result)
         else:
             raise StopIteration
-
 
     def add_product(self, product):
         """Метод добавляет продукт к списку продуктов в категории"""

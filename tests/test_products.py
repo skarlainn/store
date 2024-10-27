@@ -48,6 +48,7 @@ def test_new_price_low(mock, product):
     product.price = 5
     assert product.price == 5
 
+
 def test_iter_category(category_test):
     assert next(category_test) == "Samsung Galaxy C23 Ultra, 180000.0 руб. Остаток: 5 шт."
     assert next(category_test) == "Iphone 15, 210000.0 руб. Остаток: 8 шт."
