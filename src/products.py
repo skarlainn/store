@@ -1,6 +1,3 @@
-from numpy.ma.core import count
-
-
 class Category:
     """Класс со свойствами: имя, описание, список товаров категории"""
 
@@ -77,9 +74,14 @@ class Product:
         return (self.price * self.quantity) + (other.price * other.quantity)
 
     @classmethod
-    def new_product(cls, product: dict):
+    def new_product(cls, dict_product: dict, products=None):
         """Метод добавляет новый продукт"""
-        return cls(**product)
+        if products:
+            for product in products:
+                if product.name == dict_product["name"]:
+                    product.quantity += dict_product["quantity"]
+                    return product
+        return cls(**dict_product)
 
     @property
     def price(self):
