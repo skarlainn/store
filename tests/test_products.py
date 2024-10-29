@@ -1,7 +1,8 @@
 from unittest.mock import patch
-import pytest
-from src.products import Product
 
+import pytest
+
+from src.products import Product
 
 
 def test_products(product) -> None:
@@ -37,10 +38,9 @@ def test_new_price_low(mock, product):
     assert product.price == 5
 
 
-
-
 def test_add(product2, product3):
     assert product2 + product3 == 2580000.0
+
 
 def test_add_error(smartphone1, lawn_grass_1):
     with pytest.raises(TypeError):

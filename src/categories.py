@@ -53,4 +53,3 @@ class Category:
         for product in self.__products:
             products_string += f"{str(product)}\n"
         return products_string
-

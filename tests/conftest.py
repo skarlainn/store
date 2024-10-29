@@ -1,11 +1,12 @@
-import pytest
 import json
 
+import pytest
+
 from src.categories import Category
-from src.products import Product
 from src.lawngrass import LawnGrass
 from src.products import Product
 from src.smartphone import Smartphone
+
 
 @pytest.fixture
 def product():
@@ -71,6 +72,7 @@ def new_product() -> dict:
         "price": 180000.0,
         "quantity": 5,
     }
+
 
 @pytest.fixture
 def lawn_grass_1():
